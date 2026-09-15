@@ -1,0 +1,39 @@
+{
+  "name": "pkg-bin-doctor",
+  "version": "0.1.0",
+  "description": "Check package.json bin entries before publishing a Node CLI package.",
+  "type": "module",
+  "bin": {
+    "pkg-bin-doctor": "bin/pkg-bin-doctor.js"
+  },
+  "files": [
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check": "node bin/pkg-bin-doctor.js ."
+  },
+  "keywords": [
+    "npm",
+    "package-json",
+    "bin",
+    "cli",
+    "shebang",
+    "publish"
+  ],
+  "author": "Vijay Misal",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vjymisal0/pkg-bin-doctor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vjymisal0/pkg-bin-doctor/issues"
+  },
+  "homepage": "https://github.com/vjymisal0/pkg-bin-doctor#readme",
+  "engines": {
+    "node": ">=18"
+  }
+}
