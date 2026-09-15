@@ -1,6 +1,6 @@
 {
   "name": "pkg-bin-doctor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Check package.json bin entries before publishing a Node CLI package.",
   "type": "module",
   "bin": {

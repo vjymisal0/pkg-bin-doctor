@@ -3,6 +3,11 @@ import { access, readFile, stat } from 'node:fs/promises';
 import { constants } from 'node:fs';
 import path from 'node:path';
 
+if (process.argv.includes('--help') || process.argv.includes('-h')) {
+  console.log(`Usage: pkg-bin-doctor [package-directory]\n\nChecks package.json bin entries for missing files, missing shebangs, and non-executable files.`);
+  process.exit(0);
+}
+
 const target = path.resolve(process.argv[2] || '.');
 const packagePath = path.join(target, 'package.json');
 

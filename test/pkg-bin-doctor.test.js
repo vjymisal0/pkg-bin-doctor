@@ -16,6 +16,12 @@ async function fixture(binFile) {
   return dir;
 }
 
+test('prints help', () => {
+  const result = spawnSync(process.execPath, [cli, '--help'], { encoding: 'utf8' });
+  assert.equal(result.status, 0);
+  assert.match(result.stdout, /Usage: pkg-bin-doctor/);
+});
+
 test('passes when bin target exists and has a shebang', async () => {
   const dir = await fixture('#!/usr/bin/env node\nconsole.log("ok")\n');
   const result = spawnSync(process.execPath, [cli, dir], { encoding: 'utf8' });
