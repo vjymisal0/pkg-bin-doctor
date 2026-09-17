@@ -37,3 +37,11 @@ Small CLI packages often publish successfully but fail after install because the
 ## License
 
 MIT
+
+## API
+
+The `pkg-bin-doctor` CLI checks that package `bin` entries point to executable files with valid shebangs.
+
+```sh
+npx pkg-bin-doctor .
+```
